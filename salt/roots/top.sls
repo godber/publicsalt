@@ -1,3 +1,3 @@
 base:
   publicsaltdev:
-    - elasticsearch
+    - rabbitmq
