@@ -11,7 +11,7 @@ elasticsearch:
   service:
     - running
     - watch:
-      -file:
+      - file:
         - /etc/default/elasticsearch
         - /etc/elasticsearch/elasticsearch.yml
         - /etc/elasticsearch/logging.yml
