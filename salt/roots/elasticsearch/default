@@ -1,3 +1,5 @@
+# WARNING: This file is controlled by confirutation management
+
 # Run ElasticSearch as this user ID and group ID
 #ES_USER=elasticsearch
 #ES_GROUP=elasticsearch

@@ -1,3 +1,5 @@
+# WARNING: This file is controlled by configuration management
+
 # you can override this using by setting a system property, for example -Des.logger.level=DEBUG
 es.logger.level: INFO
 rootLogger: ${es.logger.level}, console, file
