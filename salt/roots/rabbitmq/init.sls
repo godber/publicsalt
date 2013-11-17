@@ -1,3 +1,14 @@
+# RabbitMQ Installation - Stand Alone
+# This state installed RabbitMQ from the APT repository maintained by the
+# RabbitMQ Project.  It also allows overriding configuration by means of
+# placing the listed config files in the rabbitmq directory with the FQDN of
+# the target machine appended to the end of the filename with a '.'.  For
+# instance, to override the /etc/default/rabbitmq-server file for
+# host.example.com, place the modified file in:
+#     salt://rabbitmq/default.host.example.com
+#
+#
+
 system-pkgs:
   pkg:
     - installed
@@ -23,10 +34,9 @@ rabbitmq-server:
   service:
     - running
     - watch:
-      - file:
-        - /etc/default/rabbitmq-server
-        - /etc/logrotate.d/rabbitmq-server
-        - /etc/rabbitmq/rabbitmq.config
+      - file: /etc/default/rabbitmq-server
+      - file: /etc/logrotate.d/rabbitmq-server
+      - file: /etc/rabbitmq/rabbitmq.config
 
 /etc/default/rabbitmq-server:
   file.managed:
